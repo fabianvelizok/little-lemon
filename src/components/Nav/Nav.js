@@ -4,7 +4,7 @@ import './Nav.styles.css';
 const Nav = ({ layout = '' }) => {
   const stackClass = layout === 'stack' ? 'stack' : '';
   return (
-    <nav className='nav'>
+    <nav className="nav">
       <ul className={`${stackClass}`}>
         <li><a href="/">Home</a></li>
         <li><a href="/">About</a></li>
