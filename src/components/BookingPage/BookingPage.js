@@ -4,7 +4,7 @@ import './BookingPage.styles.css';
 const BookingPage = () => {
   return (
     <div className="booking-page">
-      BookingPage
+      <h1>BookingPage</h1>
     </div>
   );
 }

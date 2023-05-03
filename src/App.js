@@ -1,4 +1,6 @@
 import React from 'react';
+import { Routes, Route } from "react-router-dom";
+
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
@@ -13,8 +15,10 @@ function App() {
     <Container className="app">
       <Header />
       <Main>
-        <HomePage />
-        <BookingPage />
+        <Routes>
+          <Route path="/" element={<HomePage />}></Route>
+          <Route path="/booking" element={<BookingPage />}></Route>
+        </Routes>
       </Main>
       <Footer />
     </Container>
