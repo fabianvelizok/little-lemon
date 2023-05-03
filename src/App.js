@@ -3,6 +3,9 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 import Container from './components/Container/Container';
+import HomePage from './components/HomePage/HomePage';
+import BookingPage from './components/BookingPage/BookingPage';
+
 import './App.styles.css';
 
 function App() {
@@ -10,7 +13,8 @@ function App() {
     <Container className="app">
       <Header />
       <Main>
-        <h1>Content</h1>
+        <HomePage />
+        <BookingPage />
       </Main>
       <Footer />
     </Container>
