@@ -1,13 +1,90 @@
+:root {
+  --primary-color-gray: #495E57;
+  --primary-color-yellow: #F4CE14;
+  --secondary-color-orange: #EE9972;
+  --secondary-color-yellow: #FBDABB;
+  --highlight-color-gray: #EDEFEE;
+  --highlight-color-black: #333333;
+  --border-radius: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
+  font-family: 'Karla', sans-serif;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1, h2 {
+  font-family: 'Markazi Text', serif;
+}
+
+h1 {
+  font-weight: 500;
+  font-size: 4rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+p {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  display: block; 
+}
+
+a {
+  text-decoration: none;
+  color: var(--highlight-color-black);
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+.lead-text {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+.section-title {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.section-subtitle {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.primary-color-gray {
+  color: var(--primary-color-gray);
+}
+.primary-bg-color-gray {
+  background-color: var(--primary-color-gray);
+}
+
+.primary-color-yellow {
+  color: var(--primary-color-yellow);
+}
+.primary-bg-color-yellow {
+  background-color: var(--primary-color-yellow);
+}
+
+.rounded {
+  border-radius: var(--border-radius);
 }

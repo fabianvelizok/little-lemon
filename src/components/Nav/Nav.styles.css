@@ -12,3 +12,8 @@
 .nav .stack {
   flex-direction: column;
 }
+
+.nav ul:not(.stack) a {
+  display: block;
+  padding: 1rem;
+}

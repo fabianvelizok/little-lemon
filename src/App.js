@@ -10,7 +10,7 @@ function App() {
     <Container className="app">
       <Header />
       <Main>
-        Content
+        <h1>Content</h1>
       </Main>
       <Footer />
     </Container>
