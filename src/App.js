@@ -4,7 +4,6 @@ import { Routes, Route } from "react-router-dom";
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
-import Container from './components/Container/Container';
 import HomePage from './components/HomePage/HomePage';
 import BookingPage from './components/BookingPage/BookingPage';
 
@@ -12,7 +11,7 @@ import './App.styles.css';
 
 function App() {
   return (
-    <Container className="app">
+    <div className="app">
       <Header />
       <Main>
         <Routes>
@@ -21,7 +20,7 @@ function App() {
         </Routes>
       </Main>
       <Footer />
-    </Container>
+    </div>
   );
 }
 

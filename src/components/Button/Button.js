@@ -1,13 +1,13 @@
 import React from 'react';
 import './Button.styles.css';
 
-const Button = ({ text, handleClick }) => {
+const Button = ({ children, handleClick }) => {
   return (
     <button
       className="button rounded primary-bg-color-yellow"
       onClick={handleClick}
     >
-      {text}
+      {children}
     </button>
   );
 }

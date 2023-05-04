@@ -77,6 +77,12 @@ a {
 .primary-bg-color-gray {
   background-color: var(--primary-color-gray);
 }
+.highlight-color-gray {
+  color: var(--highlight-color-gray);
+}
+.highlight-color-black {
+  color: var(--highlight-color-black);
+}
 
 .primary-color-yellow {
   color: var(--primary-color-yellow);
@@ -84,7 +90,11 @@ a {
 .primary-bg-color-yellow {
   background-color: var(--primary-color-yellow);
 }
+.highlight-bg-color-gray {
+  background-color: var(--highlight-color-gray);
+}
 
 .rounded {
   border-radius: var(--border-radius);
+  overflow: hidden;
 }
