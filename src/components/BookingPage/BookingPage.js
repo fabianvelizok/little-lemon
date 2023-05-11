@@ -1,13 +1,21 @@
 import React from 'react';
-import Container from '../Container/Container';
+import { useNavigate } from 'react-router-dom';
+import BookingForm from '../BookingForm/BookingForm';
+import Hero from '../Hero/Hero';
+import Button from '../Button/Button';
 import './BookingPage.styles.css';
 
 const BookingPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="booking-page">
-      <Container>
-        <h1>BookingPage</h1>
-      </Container>
+      <Hero>
+        <Button handleClick={() => navigate('/')}>
+          Home
+        </Button>
+      </Hero>
+      <BookingForm />
     </div>
   );
 }
