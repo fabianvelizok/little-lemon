@@ -4,15 +4,16 @@ import { AvailableTimesContext } from '../../contexts/AvailableTimesContext';
 
 import './BookingForm.styles.css';
 
-const BookingForm = () => {
-  const { availableTimes, updateTimes } = useContext(AvailableTimesContext);
+const emptyForm = {
+  date: '',
+  time: '',
+  guests: '',
+  occasion: ''
+};
 
-  const [form, setForm] = useState({
-    date: '',
-    time: '',
-    guests: '',
-    occasion: ''
-  });
+const BookingForm = ({ handleSubmit }) => {
+  const { availableTimes, updateTimes } = useContext(AvailableTimesContext);
+  const [form, setForm] = useState(emptyForm);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -25,18 +26,19 @@ const BookingForm = () => {
     setForm(prevState => ({ ...prevState, [name]: value }));
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmitForm = (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
-    console.log(data);
+    handleSubmit(data);
+    setForm(emptyForm);
   };
 
   // TODO: Style component
   return (
     <div className="booking-form">
       <Container>
-        <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmit}>
+        <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmitForm}>
           <label htmlFor="res-date">Choose date</label>
           <input
             type="date"
@@ -44,6 +46,7 @@ const BookingForm = () => {
             name="date"
             value={form.date}
             onChange={handleChangeDate}
+            required
           />
 
           <label htmlFor="res-time">Choose time</label>
@@ -52,6 +55,7 @@ const BookingForm = () => {
             name="time"
             value={form.time}
             onChange={handleChange}
+            required
           >
             {availableTimes.map(time => <option key={time}>{time}</option>)}
           </select>
@@ -59,13 +63,14 @@ const BookingForm = () => {
           <label htmlFor="guests">Number of guests</label>
           <input
             type="number"
-            placeholder="1"
+            placeholder="2"
             min="1"
             max="10"
             id="guests"
             name="guests"
             value={form.guests}
             onChange={handleChange}
+            required
           />
 
           <label htmlFor="occasion">Occasion</label>
@@ -74,6 +79,7 @@ const BookingForm = () => {
             name="occasion"
             value={form.occasion}
             onChange={handleChange}
+            required
           >
             <option>Birthday</option>
             <option>Anniversary</option>

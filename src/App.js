@@ -6,6 +6,7 @@ import Main from './components/Main/Main';
 import Footer from './components/Footer/Footer';
 import HomePage from './components/HomePage/HomePage';
 import BookingPage from './components/BookingPage/BookingPage';
+import ConfirmedBookingPage from './components/ConfirmedBookingPage/ConfirmedBookingPage';
 
 import './App.styles.css';
 
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/booking" element={<BookingPage />}></Route>
+          <Route path="/confirmed-booking" element={<ConfirmedBookingPage />}></Route>
         </Routes>
       </Main>
       <Footer />

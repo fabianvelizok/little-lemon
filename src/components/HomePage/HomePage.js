@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import Button from '../Button/Button';
 import Hero from '../Hero/Hero';
 import Specials from '../Specials/Specials';
@@ -12,6 +13,9 @@ const HomePage = () => {
 
   return (
     <div className="home-page">
+      <Helmet>
+        <title>Home | Little Lemon</title>
+      </Helmet>
       <Hero>
         <Button handleClick={() => navigate('/booking')}>
           Reserve a Table
