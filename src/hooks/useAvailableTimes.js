@@ -1,5 +1,5 @@
-import { useReducer, useCallback } from 'react';
-import { fetchAPI } from '../api/api';
+import { useReducer } from 'react';
+import { initializeTimes, updateTimes } from '../utils/times';
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -11,13 +11,12 @@ const reducer = (state, action) => {
 }
 
 const useAvailableTimesReducer = () => {
-  const initializeTimes = useCallback(() => fetchAPI(new Date()), []);
   const [availableTimes, dispatch] = useReducer(reducer, initializeTimes());
 
   return {
     availableTimes,
     updateTimes: (date) => {
-      const payload = fetchAPI(new Date(date));
+      const payload = updateTimes(date);
       dispatch({ type: 'updateTimes', payload });
     }
   }
