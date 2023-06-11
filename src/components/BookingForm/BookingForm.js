@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import Container from '../Container/Container';
 import { AvailableTimesContext } from '../../contexts/AvailableTimesContext';
-
+import { validateBookingForm } from './utils';
 import './BookingForm.styles.css';
 
 const emptyForm = {
@@ -30,6 +30,10 @@ const BookingForm = ({ handleSubmit }) => {
     e.preventDefault();
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
+
+    const validatedCorrectly = validateBookingForm(data);
+    if (!validatedCorrectly) return;
+
     handleSubmit(data);
     setForm(emptyForm);
   };
@@ -46,6 +50,7 @@ const BookingForm = ({ handleSubmit }) => {
             name="date"
             value={form.date}
             onChange={handleChangeDate}
+            placeholder="2023-01-01"
             required
           />
 
