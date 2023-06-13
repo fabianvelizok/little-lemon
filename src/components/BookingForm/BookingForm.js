@@ -1,5 +1,6 @@
 import React, { useState, useContext } from 'react';
 import Container from '../Container/Container';
+import Button from '../Button/Button';
 import { AvailableTimesContext } from '../../contexts/AvailableTimesContext';
 import { validateBookingForm } from './utils';
 import './BookingForm.styles.css';
@@ -38,12 +39,11 @@ const BookingForm = ({ handleSubmit }) => {
     setForm(emptyForm);
   };
 
-  // TODO: Style component
   return (
-    <div className="booking-form">
+    <div>
       <Container>
-        <form style={{ display: 'grid', maxWidth: '200px', gap: '20px' }} onSubmit={handleSubmitForm}>
-          <label htmlFor="res-date">Choose date</label>
+        <form className="booking-form" onSubmit={handleSubmitForm}>
+          <label htmlFor="res-date">Choose date *</label>
           <input
             type="date"
             id="res-date"
@@ -54,7 +54,7 @@ const BookingForm = ({ handleSubmit }) => {
             required
           />
 
-          <label htmlFor="res-time">Choose time</label>
+          <label htmlFor="res-time">Choose time *</label>
           <select
             id="res-time"
             name="time"
@@ -65,7 +65,7 @@ const BookingForm = ({ handleSubmit }) => {
             {availableTimes.map(time => <option key={time}>{time}</option>)}
           </select>
 
-          <label htmlFor="guests">Number of guests</label>
+          <label htmlFor="guests">Number of guests *</label>
           <input
             type="number"
             placeholder="2"
@@ -78,7 +78,7 @@ const BookingForm = ({ handleSubmit }) => {
             required
           />
 
-          <label htmlFor="occasion">Occasion</label>
+          <label htmlFor="occasion">Occasion *</label>
           <select
             id="occasion"
             name="occasion"
@@ -90,7 +90,7 @@ const BookingForm = ({ handleSubmit }) => {
             <option>Anniversary</option>
           </select>
 
-          <input type="submit" value="Make Your reservation" />
+          <Button aria-label="Make reservation" handleClick={() => {}}>Make your reservation</Button>
         </form>
       </Container>
     </div>

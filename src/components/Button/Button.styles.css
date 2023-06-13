@@ -1,6 +1,8 @@
 .button {
-  padding: 0.8125rem;
+  padding: 0.5rem 1rem;
   font-size: 1.25rem;
   border: 0;
   cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
 }

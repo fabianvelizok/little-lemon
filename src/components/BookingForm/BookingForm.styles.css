@@ -1,2 +1,26 @@
 .booking-form {
+  display: grid;
+  max-width: 550px;
+  gap: 1.25rem;
+  margin: 0 auto;
+}
+
+.booking-form label {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.booking-form input, .booking-form select {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 700;
+  background-color: var(--highlight-color-gray);
+  border: 0;
+  border-radius: 1rem;
+}
+
+.booking-form button {
+  margin-top: 1rem;
 }
