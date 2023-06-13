@@ -11,19 +11,19 @@ const mockCards = [
     image: salad,
     title: 'Card 1',
     price: 100,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies aliquam, nunc sapien aliquet nunc, quis aliquam nisl nunc vel nisl. Donec auctor, nisl eget ultricies aliquam, nunc sapien aliquet nunc, quis aliquam nisl nunc vel nisl.'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rutrum ullamcorper mauris ac tincidunt. Donec consectetur, nisi a sagittis pulvinar.'
   },
   {
     image: dessert,
     title: 'Card 2',
     price: 120,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies aliquam, nunc sapien aliquet nunc, quis aliquam nisl nunc vel nisl. Donec auctor, nisl eget ultricies aliquam, nunc sapien aliquet nunc, quis aliquam nisl nunc vel nisl.'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur elementum nunc eu mauris tristique, in lobortis lacus condimentum. Proin finibus.'
   },
   {
     image: salad,
     title: 'Card 3',
     price: 80,
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec auctor, nisl eget ultricies aliquam, nunc sapien aliquet nunc, quis aliquam nisl nunc vel nisl. Donec auctor, nisl eget ultricies aliquam, nunc sapien aliquet nunc, quis aliquam nisl nunc vel nisl.'
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a diam elementum, laoreet urna a, congue velit. Phasellus pretium lacinia.'
   }
 ];
 
@@ -34,7 +34,7 @@ const Specials = ({ className }) => {
   return (
     <section>
       <Container className={classes}>
-        <div className="specials-heading">
+        <div className="specials-heading specials-heading-top">
           <h1 className="highlight-color-black hero-title">This Weeks Specials!</h1>
           <Button handleClick={() => navigate('/booking')}>
             Online Menu

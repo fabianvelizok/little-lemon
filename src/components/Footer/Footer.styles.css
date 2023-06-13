@@ -13,3 +13,15 @@
   display: block;
   padding: .5rem 0;
 }
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
